@@ -64,3 +64,25 @@ The Rewrite: The same team that created Borg built a new open-source project, in
 The Birth of Kubernetes: In 2014, Google created this tool, called Kubernetes.
 
 The Gift to the World: In 2015, Google donated the project to the Cloud Native Computing Foundation (CNCF).
+
+## We Chose Kubernetes ?
+
+The core difference between a platform-native orchestrator (like AWS ECS) and Kubernetes is the level of infrastructure abstraction.
+
+![alt.image](images/k8.png)
+
+**Platform-Native Orchestration (e.g., AWS ECS)**
+
+* Coupled Configuration: Deployment manifest definitions are tightly bound to proprietary APIs and platform-specific infrastructure conventions.
+* Vendor Lock-in: Migrating between cloud providers is labor-intensive, as it requires a complete refactor of deployment configurations to align with the new platform’s orchestration logic.
+* Zero Portability: Since the configuration is native to one service, it cannot be reused across heterogeneous cloud environments like GCP or Oracle.
+
+**Kubernetes (Standardized Orchestration)**
+
+* Universal API: Kubernetes provides a consistent, vendor-agnostic abstraction layer, allowing you to use a unified YAML schema across any environment.
+* "Write Once, Deploy Anywhere": Once your deployment manifest is defined for Kubernetes, it is portable and will function consistently on AWS, GCP, Oracle, or on-premises infrastructure without modification.
+* Strategic Flexibility: Decoupling your application from the underlying provider prevents vendor lock-in, granting you the architectural freedom to shift workloads based on cost, performance, or availability.
+
+
+
+[Kubernetes Architecture Details](kubernetes-architecture.md)
